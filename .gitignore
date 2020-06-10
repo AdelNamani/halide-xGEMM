@@ -1,0 +1,5 @@
+.vscode
+bin/data/results.txt
+bin/halide_xGEMM
+bin/test_halide_xGEMM
+lib/*
