@@ -29,15 +29,20 @@ int main(int argc, char **argv)
     // A(n,m) B(m,l) C(n,l), alpha & beta
     // can be any real number.
 
-    int a[2][4] = {
-        {0, 1, 2, 3},
-        {4, 5, 6, 7}};
+    int a[2][7] = {
+        {0, 1, 2, 3, 99, 8, 2},
+        {4, 5, 6, 7, 10, 11, 5}
+    };
 
-    int b[4][5] = {
+    int b[7][5] = {
         {0, 1, 2, 3, 5},
         {4, 5, 6, 7, 5},
         {8, 9, 10, 11, 5},
-        {8, 9, 10, 11, 5}};
+        {8, 9, 3, 11, 5},
+        {8, 9, 13, 11, 5},
+        {8, 9, 1, 11, 5},
+        {8, 9, 10, 11, 5}
+    };
 
     int c[2][5] = {
         {0, 1, 2, 3, 1},
@@ -59,8 +64,7 @@ int main(int argc, char **argv)
     Buffer<int> inputB(b);
     Buffer<int> inputC(c);
 
-    // Checking that dimensions   are
-    // coherant
+    // Checking that dimensions are coherant
     if (! ( (inputA.width() == inputB.height()) && (inputA.height() == inputC.height()) && (inputB.width() == inputC.width()) )){
         printf("Matrices dimensions must be of the form A(n,m) B(m,l) C(n,l)\n");
         exit(1);
@@ -92,26 +96,5 @@ int main(int argc, char **argv)
     results.close();
     printf("Saved successfully !\n");
 
-    // Verification of results calculated
-    // By the halid program, same role as
-    // the C program so it's commented
-
-    /*
-    int vrf ;
-    for (int i = 0; i < output.width(); i++)
-    {
-        for (int j = 0; j < output.height(); j++)
-        {
-            vrf = 0;
-            for (int k = 0; k < inputA.width(); k++)
-            {
-                vrf += a[i][k] * b[k][j];
-            }
-            vrf = alpha * vrf + beta * c[i][j];
-            printf("output[%d][%d] = %d", i, j, output(i, j));
-            if (vrf == output(i, j)) printf(" Correct!\n"); else printf(" False! should be : %d\n",vrf);
-        }
-    }
-    */
     return 0;
 }
