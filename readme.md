@@ -30,15 +30,16 @@ You'll need the Halide to run this project, you can either:
 More information can be found at [https://github.com/halide/Halide](https://github.com/halide/Halide)
 
 ## Usage
-First clone this repository : 
+First clone this repository and give the script execute permission to make it runnable : 
 
-- ```git clone https://github.com/AdelNamani/halide-xGEMM.git```
+- ``` git clone https://github.com/AdelNamani/halide-xGEMM.git```
 - ``` cd halide-xGEMM```
+- ``` chmod +x script.sh```
 
 To run the program you just need to run the ```script.sh``` with the path of Halide as a parameter. For example:
 
-- With relative path : ```$ ./script.sh -p ../Halide```
-- With absolute path : ```$ ./script.sh -p /mnt/c/Users/DELL/code/Halide```
+- With relative path : ```$ ./script.sh -p ../halide```
+- With absolute path : ```$ ./script.sh -p /mnt/c/Users/DELL/code/halide```
 
 This script will compile both programs and run them, if everything is okay and the multiplication is giving the correct results we will have this output:
 ```
