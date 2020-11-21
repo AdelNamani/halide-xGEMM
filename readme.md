@@ -20,7 +20,7 @@ You'll need the Halide to run this project, you can either:
 	        ../llvm-project/llvm 
 	        ```
         
-        - ``` cmake --build . --target install ```
+        - ``` cmake --build . --target install -- -j8 ```
         - ``` export LLVM_CONFIG=<path to llvm>/llvm-install/bin/llvm-config```
 
 - ### Acquiring & building Halide 
