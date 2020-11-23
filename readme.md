@@ -25,7 +25,7 @@ You'll need the Halide to run this project, you can either:
 
 - ### Acquiring & building Halide 
 	- Start by cloning the repository ```git clone https://github.com/halide/Halide.git```  
-	- Run `make` in the root directory. 
+	- Run `make -j8` in the root directory. 
 
 More information can be found at [https://github.com/halide/Halide](https://github.com/halide/Halide)
 
